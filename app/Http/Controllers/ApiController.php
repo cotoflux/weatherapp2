@@ -10,13 +10,14 @@ class ApiController extends Controller
 
 
    public function __construct(Ciudad $ciudad)
-   {    dd($ciudad);
+   {    
         $this->ciudad = $ciudad;
    }
 
-   public function findByCity($ciudad)
+   public function mostrar($ciudad)
    {
-       $ciudad = $this->ciudad->findById($ciudad);
+       $ciudad = $this->ciudad->encuentraPorCiudad($ciudad);
+       dd($ciudad);
        return view('vistaCiudad', compact('ciudad'));
 
    }

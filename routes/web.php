@@ -15,4 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/city/{ciudad}', 'ApiController@findByCity');
+Route::get('/ciudad/{ciudad}', 'ApiController@mostrar');
