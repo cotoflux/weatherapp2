@@ -13,7 +13,13 @@ class Ciudades extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('ciudades', function(Blueprint $table){
+            $table->increments('id');
+            $table->string('ciudad');
+            $table->integer('codigopostal');
+            $table->float('temperatura');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +29,6 @@ class Ciudades extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('cuidades');
     }
 }

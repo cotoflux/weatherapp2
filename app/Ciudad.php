@@ -7,6 +7,8 @@ use GuzzleHttp\Client;
 
 class Ciudad extends Model
 {
+
+    protected $fillable = ['ciudad', 'codigopostal','temperatura'];
     protected $client;
 
     public function __construct(Client $client)

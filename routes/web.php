@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::get('/ciudad/{ciudad}', 'ApiController@mostrar');
+Route::get('/home', 'HomeController@insertar');
