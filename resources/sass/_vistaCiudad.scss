@@ -5,6 +5,7 @@
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
+                font-family: 'Open Sans', ;
             }
 
             .full-height {
@@ -70,7 +71,6 @@
                 padding:0;
                 color: white;
                 text-align: center;
-                padding: 61px 0;
             }
             header{
                 padding: 25px 0;
@@ -91,8 +91,32 @@
             .container{
                 position: relative;
                 min-height: 100%;
+                
             }
             .botonBuscar{
                 margin-top: 20px;
+                justify-content: center;
+            }
+            .longitud{
+                padding: 20px;
+                justify-content: center;
+                
+            }
+            .totalTemperatura{
+                padding: 20px;
+                justify-content: center;
+            }
+
+            .temperaturas{
+                padding: 20px;
+                justify-content: center;
+            }
+            .horario{
+                text-align: center;
+                justify-content: center;
+            }
+
+            a{
+                font-family: 'Nunito', sans-serif;
             }
             

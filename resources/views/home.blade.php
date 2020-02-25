@@ -20,11 +20,11 @@
                     <img class="imagen col-10" src="img\thumbnail_Bitmap.png">
             </header>
             <main class= "row justify-content-center">
-                <form action="{{action('HomeController@insertar')}}" method="post" class="col-8" >
-                    {{@csrf_field()}}
+                <form action="{{action('ApiController@pasarDatos')}}" method="post" class="col-8" >
+                    @csrf
                     <p>Entérate del tiempo en la zona exacta que te interesa buscando por 
                     código postal</p>
-                    <input class="myimput" name="_method" type="INSERT" placeholder="Intoduce el código postal">
+                    <input class="myimput" name="postal_code" placeholder="Intoduce el código postal">
                     <button class="btn btn-primary btn-xs col-12 botonBuscar" type="submit">Buscar<i class="fab fa-searchengin tamaño float-right "></i>
                     </button>
                 </form>

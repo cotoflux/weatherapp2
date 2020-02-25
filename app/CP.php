@@ -30,7 +30,7 @@ class CP extends Model
            // dd($response);
             
         } catch (\Exception $e){
-            dd($e);
+            dd("No he podidod conectarme");
             return[];
         }
         return $this->response_handler($response->getBody()->getContents());

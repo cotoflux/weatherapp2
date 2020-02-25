@@ -5,10 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\CP;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Routing\Redirector;
 
 class ApiController extends Controller
 {
-
+    public function pasarDatos(Request $request){
+      
+      return  $this->mostrar($request);
+    }
 
    public function __construct(CP $ciudad)
    {    
@@ -18,11 +22,12 @@ class ApiController extends Controller
    public function mostrar($cp)
    {
 
+    $cp=$cp->postal_code;
     $ciudad = $this->ciudad->encuentraPorCodigoPostal($cp);
 
     $this->dataExistsInDatabase($ciudad, $cp);
        //dd($ciudad);
-       return view('vistaCiudad', compact('ciudad'));
+       return view('vistaCiudad', compact(['ciudad', 'cp']));
 
    }
 
