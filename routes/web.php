@@ -12,12 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::get('/ciudad/{ciudad}', 'ApiController@mostrar');
 
 Route::get('/home', 'HomeController@insertar');
-
 
 Route::post('/ciudad', 'ApiController@pasarDatos');

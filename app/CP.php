@@ -26,9 +26,7 @@ class CP extends Model
     {
         
         try{
-            $response = $this->client->request('GET', $url);
-           // dd($response);
-            
+            $response = $this->client->request('GET', $url);           
         } catch (\Exception $e){
             dd("No he podidod conectarme");
             return[];
