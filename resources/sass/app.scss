@@ -6,3 +6,10 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+//Importar css de la home.
+@import '_home';
+
+//Importar css de la vista de la Ciuda.
+@import 'vistaCiudad';
+

@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use GuzzleHttp\Client;
 
-class Ciudad extends Model
+class CP extends Model
 {
 
     protected $fillable = ['ciudad', 'codigopostal','temperatura'];
@@ -16,10 +16,10 @@ class Ciudad extends Model
         $this->client = $client;
     }
 
-    public function encuentraPorCiudad($ciudad)
+    public function encuentraPorCodigoPostal($cp)
     {
         $token = env('TOKEN');
-        return $this->endpointRequest('forecast?q='.$ciudad.'&appid='.$token);
+        return $this->endpointRequest('forecast?zip='.$cp.',es&units=metric&appid='.$token);
     }
 
     public function endpointRequest($url)
@@ -27,8 +27,10 @@ class Ciudad extends Model
         
         try{
             $response = $this->client->request('GET', $url);
+           // dd($response);
             
         } catch (\Exception $e){
+            dd($e);
             return[];
         }
         return $this->response_handler($response->getBody()->getContents());

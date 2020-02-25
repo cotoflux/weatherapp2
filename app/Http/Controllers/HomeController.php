@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function insertar(Request $request){
+    public function insertar(){
         return view('home');
     }
+
 }
