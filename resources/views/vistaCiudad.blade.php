@@ -36,7 +36,7 @@
                                 <div class="iconotemperatura">
                                     
                                     @if(floor($ciudad->list[0]->main->temp) >= 17)
-                                        <i class="far fa-temperature-hot fa-3x"></i>
+                                    <i class="fas fa-sun 3x"></i>
                                     @endif
                                     @if($ciudad->list[0]->main->temp < 17)
                                         <i class="fas fa-snowflake fa-3x" ></i>

@@ -24,7 +24,7 @@ class CP extends Model
 
     public function endpointRequest($url)
     {
-        
+                
         try{
             $response = $this->client->request('GET', $url);           
         } catch (\Exception $e){
